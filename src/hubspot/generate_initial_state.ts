@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import { HubSpotClient } from "../provider/hubspot_client";
+import { ContactPropertyProps } from "../../types/ContactProperty";
 
 export async function getCurrentContactProperties(): Promise<any[]> {
     const hsClient = new HubSpotClient();
@@ -27,7 +28,10 @@ function buildArgs(props: any, keys: string[]): string {
 }
 
 function generateContactPropertyFunction(prop: any) {
-    const buildArgsKeys = [ "name", "label", "groupName", "type", "fieldType", "description", "formField", "displayOrder", "options" ];
+    const buildArgsKeys = [
+        "name", "label", "groupName", "type", "fieldType", "description", "formField", "displayOrder",
+        "mutableDefinitionNotDeletable", "readOnly", "readOnlyDefinition", "hidden", "options", "calculated"
+    ];
     return "\n" +
            `    properties["${prop.name}"] = new ContactProperty("${prop.name}", {\n` +
            buildArgs(prop, buildArgsKeys) +
@@ -35,7 +39,7 @@ function generateContactPropertyFunction(prop: any) {
 }
 
 export function generateContactPropertyTS(props: any[]) {
-    const buildArgsKeys = [ "name", "label", "groupName", "type", "fieldType", "description", "formField", "displayOrder", "options" ];
+    console.log(Object.keys(props));
     let file = "// Contact Properties.\n" +
                "import * as pulumi from \"@pulumi/pulumi\";\n" +
                "import { ContactProperty } from \"../provider/contact_properties\";\n\n" +

@@ -1,13 +1,30 @@
 import * as pulumi from "@pulumi/pulumi";
 import { HubSpotClient } from "./hubspot_client";
 import { getResourceDiffKeys, checkRequiredKeysExist } from "./utils";
-import { HubSpotContactPropertiesArgs, ContactPropertyProps } from "../../types/ContactProperty";
+import { ContactPropertyProps } from "../../types/ContactProperty";
 
 class ContactPropertyProvider implements pulumi.dynamic.ResourceProvider {
     private hsClient: HubSpotClient;
 
     constructor() {
         this.hsClient = new HubSpotClient();
+    }
+
+    private populateDefaultValues(args: ContactPropertyProps): ContactPropertyProps {
+        const defaults = {
+            description: "",
+            formField: false,
+            displayOrder: -1,
+            mutableDefinitionNotDeletable: false,
+            readOnly: false,
+            readOnlyDefinition: false,
+            hidden: false,
+            options: [],
+            deleted: false,
+            calculated: false,
+        };
+
+        return Object.assign({}, defaults, args);
     }
 
     public async check(old: ContactPropertyProps, update: ContactPropertyProps): Promise<pulumi.dynamic.CheckResult> {
@@ -22,32 +39,36 @@ class ContactPropertyProvider implements pulumi.dynamic.ResourceProvider {
     }
 
     public async create(args: ContactPropertyProps): Promise<pulumi.dynamic.CreateResult> {
-        const [ err, createdContactProperty ] = await this.hsClient.post("/properties/v1/contacts/properties", args);
+        const apiArgs = this.populateDefaultValues(args);
+
+        const [ err, createdContactProperty ] = await this.hsClient.post("/properties/v1/contacts/properties", apiArgs);
         if (err) {
             const propertyExists = err?.response?.data?.propertiesErrorCode === "PROPERTY_EXISTS";
             if (propertyExists) {
-                const getURL = "/properties/v1/contacts/properties/named/" + args.name;
+                const getURL = "/properties/v1/contacts/properties/named/" + apiArgs.name;
                 const [ err, existingContactProperty ] = await this.hsClient.get(getURL);
                 if (err || !existingContactProperty) {
-                    throw new Error(`Error reading contact property [${args.name}]`);
+                    throw new Error(`Error reading contact property [${apiArgs.name}]`);
                 }
 
-                if (existingContactProperty.calculated === true) {
-                    await pulumi.log.info(`Contacty property [${args.name}] cannot be changed because it is calculated. This property will only be managed by Pulumi.`, undefined, undefined, true);
+                const checkValues = [ existingContactProperty.calculated, existingContactProperty.readOnly ];
+
+                if (checkValues.indexOf(true) > -1) {
+                    await pulumi.log.info(`Contacty property [${apiArgs.name}] cannot be changed because it is calculated. This property will only be managed by Pulumi.`, undefined, undefined, true);
                     return {
                         id: existingContactProperty?.name,
                         outs: { createdContactProperty: existingContactProperty },
                     };
                 }
 
-                const { outs } = await this.update(existingContactProperty?.id, existingContactProperty, args)
+                const { outs } = await this.update(existingContactProperty?.id, existingContactProperty, apiArgs)
 
                 return {
                     id: existingContactProperty?.name,
                     outs: outs,
                 };
             }
-            throw new Error(`Contact Property Creation failed [${args.name}]: ${err?.response?.data?.message}`)
+            throw new Error(`Contact Property Creation failed [${apiArgs.name}]: ${err?.response?.data?.message}`)
         }
 
         return {
@@ -58,17 +79,17 @@ class ContactPropertyProvider implements pulumi.dynamic.ResourceProvider {
 
     public async update(id: string, out: any, update: ContactPropertyProps): Promise<pulumi.dynamic.UpdateResult> {
         const fieldUpdates = Object.assign({}, out, update);
+        const apiArgs = this.populateDefaultValues(fieldUpdates);
 
         // Throw an error if the API name is changed as this could lead to something breaking.
         // TODO: Find a way to safely change an API name.
-        if (fieldUpdates.name !== out.name) {
-            throw new Error(`Cannot change API name of contact property. This may cause a workflow to break. [${fieldUpdates.name}]`);
+        if (apiArgs.name !== out.name) {
+            throw new Error(`Cannot change API name of contact property. This may cause a workflow to break. [${apiArgs.name}]`);
         }
 
-        const url = "/properties/v1/contacts/properties/named/" + fieldUpdates.name;
-        const [ err, updates ] = await this.hsClient.put(url, fieldUpdates);
+        const url = "/properties/v1/contacts/properties/named/" + apiArgs.name;
+        const [ err, updates ] = await this.hsClient.put(url, apiArgs);
         if (err) {
-            console.log(err);
             throw new Error("There was an error updating the contact property: " + err);
         }
 
@@ -95,19 +116,23 @@ class ContactPropertyProvider implements pulumi.dynamic.ResourceProvider {
             return;
         }
 
-        const isNonHSDeletable = props.createdContactProperty.mutableDefinitionNotDeletable;
-        if (isNonHSDeletable) {
-            await pulumi.log.info(`The Property '${props.createdContactProperty.name}' cannot be deleted. Removing from Pulumi management.`);
+        const apiArgs = this.populateDefaultValues(props.createdContactProperty);
+
+        const isNonHSDeletable = apiArgs.mutableDefinitionNotDeletable;
+        const isReadOnly = apiArgs.readOnly;
+
+        if (isNonHSDeletable || isReadOnly) {
+            await pulumi.log.info(`The Property '${apiArgs.name}' cannot be deleted. Removing from Pulumi management.`);
             return;
         }
 
-        const url = "/properties/v1/contacts/properties/named/" + props.createdContactProperty.name;
+        const url = "/properties/v1/contacts/properties/named/" + apiArgs.name;
         const [ err, contactPropery ] = await this.hsClient.delete(url, {});
         if (err) {
-            throw new Error(`Error deleting contact property [${props.createdContactProperty.name}]: ${err?.response?.data?.message}`);
+            throw new Error(`Error deleting contact property [${apiArgs.name}]: ${err?.response?.data?.message}`);
         }
 
-        await pulumi.log.info(`Contact property [${props.createdContactProperty.name}] deleted successfully.`, undefined, undefined, true);
+        await pulumi.log.info(`Contact property [${apiArgs.name}] deleted successfully.`, undefined, undefined, true);
     }
 }
 
@@ -115,7 +140,7 @@ export class ContactProperty extends pulumi.dynamic.Resource {
     // @ts-ignore
     public readonly createdContactProperty: pulumi.Output<ContactPropertyProps>;
 
-    constructor(name: string, args: HubSpotContactPropertiesArgs, opts?: pulumi.CustomResourceOptions) {
+    constructor(name: string, args: ContactPropertyProps, opts?: pulumi.CustomResourceOptions) {
         const contactProperty = new ContactPropertyProvider();
         const resourceName = "hubspot:contactproperty:" + name
         super(contactProperty, resourceName, { ...args, createdContactProperty: undefined }, opts);

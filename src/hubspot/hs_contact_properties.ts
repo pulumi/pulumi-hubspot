@@ -12,9 +12,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["date_of_birth"] = new ContactProperty("date_of_birth", {
@@ -24,9 +28,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["days_to_close"] = new ContactProperty("days_to_close", {
@@ -36,9 +44,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["degree"] = new ContactProperty("degree", {
@@ -48,9 +60,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["field_of_study"] = new ContactProperty("field_of_study", {
@@ -60,9 +76,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["first_conversion_date"] = new ContactProperty("first_conversion_date", {
@@ -72,9 +92,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["first_conversion_event_name"] = new ContactProperty("first_conversion_event_name", {
@@ -84,9 +108,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["first_deal_created_date"] = new ContactProperty("first_deal_created_date", {
@@ -96,9 +124,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["gender"] = new ContactProperty("gender", {
@@ -108,9 +140,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["graduation_date"] = new ContactProperty("graduation_date", {
@@ -120,9 +156,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["hs_additional_emails"] = new ContactProperty("hs_additional_emails", {
@@ -132,9 +172,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_all_contact_vids"] = new ContactProperty("hs_all_contact_vids", {
@@ -144,9 +188,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_analytics_first_touch_converting_campaign"] = new ContactProperty("hs_analytics_first_touch_converting_campaign", {
@@ -156,9 +204,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_last_touch_converting_campaign"] = new ContactProperty("hs_analytics_last_touch_converting_campaign", {
@@ -168,9 +220,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_avatar_filemanager_key"] = new ContactProperty("hs_avatar_filemanager_key", {
@@ -180,9 +236,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_calculated_form_submissions"] = new ContactProperty("hs_calculated_form_submissions", {
@@ -192,9 +252,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_calculated_merged_vids"] = new ContactProperty("hs_calculated_merged_vids", {
@@ -204,9 +268,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_calculated_mobile_number"] = new ContactProperty("hs_calculated_mobile_number", {
@@ -216,9 +284,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_calculated_phone_number"] = new ContactProperty("hs_calculated_phone_number", {
@@ -228,9 +300,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_calculated_phone_number_area_code"] = new ContactProperty("hs_calculated_phone_number_area_code", {
@@ -240,9 +316,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_calculated_phone_number_country_code"] = new ContactProperty("hs_calculated_phone_number_country_code", {
@@ -252,9 +332,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_calculated_phone_number_region_code"] = new ContactProperty("hs_calculated_phone_number_region_code", {
@@ -264,9 +348,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_content_membership_email_confirmed"] = new ContactProperty("hs_content_membership_email_confirmed", {
@@ -276,9 +364,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "bool",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_content_membership_notes"] = new ContactProperty("hs_content_membership_notes", {
@@ -288,9 +380,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "textarea",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_content_membership_registered_at"] = new ContactProperty("hs_content_membership_registered_at", {
@@ -300,9 +396,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_content_membership_registration_domain_sent_to"] = new ContactProperty("hs_content_membership_registration_domain_sent_to", {
@@ -312,9 +412,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_content_membership_registration_email_sent_at"] = new ContactProperty("hs_content_membership_registration_email_sent_at", {
@@ -324,9 +428,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_content_membership_status"] = new ContactProperty("hs_content_membership_status", {
@@ -336,9 +444,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
-        options: [{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Active","displayOrder":-1,"value":"active"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Inactive","displayOrder":-1,"value":"inactive"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"Active","hidden":false,"description":null,"displayOrder":-1,"readOnly":true,"value":"active"},{"doubleData":null,"label":"Inactive","hidden":false,"description":null,"displayOrder":-1,"readOnly":true,"value":"inactive"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_conversations_visitor_email"] = new ContactProperty("hs_conversations_visitor_email", {
@@ -348,9 +460,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_created_by_conversations"] = new ContactProperty("hs_created_by_conversations", {
@@ -360,9 +476,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "bool",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: true,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_created_by_user_id"] = new ContactProperty("hs_created_by_user_id", {
@@ -372,9 +492,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_createdate"] = new ContactProperty("hs_createdate", {
@@ -384,9 +508,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_document_last_revisited"] = new ContactProperty("hs_document_last_revisited", {
@@ -396,9 +524,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_domain"] = new ContactProperty("hs_email_domain", {
@@ -408,9 +540,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_email_quarantined"] = new ContactProperty("hs_email_quarantined", {
@@ -420,9 +556,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "bool",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_quarantined_reason"] = new ContactProperty("hs_email_quarantined_reason", {
@@ -432,9 +572,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "enumeration",
         fieldType: "checkbox",
-        options: [{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Other","displayOrder":-1,"value":"OTHER"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Suspicious Form Activity","displayOrder":-1,"value":"FORM_ABUSE"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"Other","hidden":false,"description":null,"displayOrder":-1,"readOnly":true,"value":"OTHER"},{"doubleData":null,"label":"Suspicious Form Activity","hidden":false,"description":null,"displayOrder":-1,"readOnly":true,"value":"FORM_ABUSE"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_sends_since_last_engagement"] = new ContactProperty("hs_email_sends_since_last_engagement", {
@@ -444,9 +588,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_emailconfirmationstatus"] = new ContactProperty("hs_emailconfirmationstatus", {
@@ -456,9 +604,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "enumeration",
         fieldType: "select",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"","displayOrder":1,"value":""},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Confirmed","displayOrder":2,"value":"Confirmed"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Confirmation Pending","displayOrder":3,"value":"Confirmation Pending"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Confirmation Email Sent","displayOrder":4,"value":"Confirmation Email Sent"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"User clicked confirmation","displayOrder":6,"value":"User clicked confirmation"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"HubSpot Rep. marked confirmed","displayOrder":7,"value":"HubSpot Rep. marked confirmed"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Customer marked confirmed","displayOrder":8,"value":"Customer marked confirmed"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Confirmed from previous behavior","displayOrder":9,"value":"Confirmed from previous behavior"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Confirmed due to form","displayOrder":11,"value":"Confirmed due to form"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":""},{"doubleData":null,"label":"Confirmed","hidden":false,"description":null,"displayOrder":2,"readOnly":null,"value":"Confirmed"},{"doubleData":null,"label":"Confirmation Pending","hidden":false,"description":null,"displayOrder":3,"readOnly":null,"value":"Confirmation Pending"},{"doubleData":null,"label":"Confirmation Email Sent","hidden":false,"description":null,"displayOrder":4,"readOnly":null,"value":"Confirmation Email Sent"},{"doubleData":null,"label":"User clicked confirmation","hidden":false,"description":null,"displayOrder":6,"readOnly":null,"value":"User clicked confirmation"},{"doubleData":null,"label":"HubSpot Rep. marked confirmed","hidden":false,"description":null,"displayOrder":7,"readOnly":null,"value":"HubSpot Rep. marked confirmed"},{"doubleData":null,"label":"Customer marked confirmed","hidden":false,"description":null,"displayOrder":8,"readOnly":null,"value":"Customer marked confirmed"},{"doubleData":null,"label":"Confirmed from previous behavior","hidden":false,"description":null,"displayOrder":9,"readOnly":null,"value":"Confirmed from previous behavior"},{"doubleData":null,"label":"Confirmed due to form","hidden":false,"description":null,"displayOrder":11,"readOnly":null,"value":"Confirmed due to form"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_facebook_ad_clicked"] = new ContactProperty("hs_facebook_ad_clicked", {
@@ -468,9 +620,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "bool",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: true,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["hs_first_engagement_date"] = new ContactProperty("hs_first_engagement_date", {
@@ -480,9 +636,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_google_click_id"] = new ContactProperty("hs_google_click_id", {
@@ -492,9 +652,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["hs_ip_timezone"] = new ContactProperty("hs_ip_timezone", {
@@ -504,9 +668,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_is_contact"] = new ContactProperty("hs_is_contact", {
@@ -516,9 +684,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "bool",
         fieldType: "calculation_read_time",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: true,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_is_unworked"] = new ContactProperty("hs_is_unworked", {
@@ -528,9 +700,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "bool",
         fieldType: "calculation_equation",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: true,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_last_sales_activity_date"] = new ContactProperty("hs_last_sales_activity_date", {
@@ -540,9 +716,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lastmodifieddate"] = new ContactProperty("hs_lastmodifieddate", {
@@ -552,9 +732,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lead_status"] = new ContactProperty("hs_lead_status", {
@@ -564,9 +748,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "radio",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"New","displayOrder":0,"value":"NEW"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Open","displayOrder":1,"value":"OPEN"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"In Progress","displayOrder":2,"value":"IN_PROGRESS"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Open Deal","displayOrder":2,"value":"OPEN_DEAL"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Unqualified","displayOrder":3,"value":"UNQUALIFIED"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Attempted to Contact","displayOrder":4,"value":"ATTEMPTED_TO_CONTACT"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Connected","displayOrder":5,"value":"CONNECTED"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Bad Timing","displayOrder":6,"value":"BAD_TIMING"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"New","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"NEW"},{"doubleData":null,"label":"Open","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"OPEN"},{"doubleData":null,"label":"In Progress","hidden":false,"description":null,"displayOrder":2,"readOnly":null,"value":"IN_PROGRESS"},{"doubleData":null,"label":"Open Deal","hidden":false,"description":null,"displayOrder":2,"readOnly":null,"value":"OPEN_DEAL"},{"doubleData":null,"label":"Unqualified","hidden":false,"description":null,"displayOrder":3,"readOnly":null,"value":"UNQUALIFIED"},{"doubleData":null,"label":"Attempted to Contact","hidden":false,"description":null,"displayOrder":4,"readOnly":null,"value":"ATTEMPTED_TO_CONTACT"},{"doubleData":null,"label":"Connected","hidden":false,"description":null,"displayOrder":5,"readOnly":null,"value":"CONNECTED"},{"doubleData":null,"label":"Bad Timing","hidden":false,"description":null,"displayOrder":6,"readOnly":null,"value":"BAD_TIMING"}],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_legal_basis"] = new ContactProperty("hs_legal_basis", {
@@ -576,9 +764,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "checkbox",
-        options: [{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Legitimate interest - prospect/lead","displayOrder":0,"value":"Legitimate interest – prospect/lead"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Legitimate interest - existing customer","displayOrder":1,"value":"Legitimate interest – existing customer"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Legitimate interest - other","displayOrder":2,"value":"Legitimate interest - other"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Performance of a contract","displayOrder":3,"value":"Performance of a contract"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Freely given consent from contact","displayOrder":4,"value":"Freely given consent from contact"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Not applicable","displayOrder":5,"value":"Not applicable"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"Legitimate interest - prospect/lead","hidden":false,"description":null,"displayOrder":0,"readOnly":true,"value":"Legitimate interest – prospect/lead"},{"doubleData":null,"label":"Legitimate interest - existing customer","hidden":false,"description":null,"displayOrder":1,"readOnly":true,"value":"Legitimate interest – existing customer"},{"doubleData":null,"label":"Legitimate interest - other","hidden":false,"description":null,"displayOrder":2,"readOnly":true,"value":"Legitimate interest - other"},{"doubleData":null,"label":"Performance of a contract","hidden":false,"description":null,"displayOrder":3,"readOnly":true,"value":"Performance of a contract"},{"doubleData":null,"label":"Freely given consent from contact","hidden":false,"description":null,"displayOrder":4,"readOnly":true,"value":"Freely given consent from contact"},{"doubleData":null,"label":"Not applicable","hidden":false,"description":null,"displayOrder":5,"readOnly":true,"value":"Not applicable"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_merged_object_ids"] = new ContactProperty("hs_merged_object_ids", {
@@ -588,9 +780,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "checkbox",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_object_id"] = new ContactProperty("hs_object_id", {
@@ -600,9 +796,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_sales_email_last_clicked"] = new ContactProperty("hs_sales_email_last_clicked", {
@@ -612,9 +812,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_sales_email_last_opened"] = new ContactProperty("hs_sales_email_last_opened", {
@@ -624,9 +828,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_searchable_calculated_international_mobile_number"] = new ContactProperty("hs_searchable_calculated_international_mobile_number", {
@@ -636,9 +844,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "phone_number",
         fieldType: "phonenumber",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_searchable_calculated_international_phone_number"] = new ContactProperty("hs_searchable_calculated_international_phone_number", {
@@ -648,9 +860,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "phone_number",
         fieldType: "phonenumber",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_searchable_calculated_mobile_number"] = new ContactProperty("hs_searchable_calculated_mobile_number", {
@@ -660,9 +876,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "phone_number",
         fieldType: "phonenumber",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_searchable_calculated_phone_number"] = new ContactProperty("hs_searchable_calculated_phone_number", {
@@ -672,9 +892,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "phone_number",
         fieldType: "phonenumber",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_sequences_is_enrolled"] = new ContactProperty("hs_sequences_is_enrolled", {
@@ -684,9 +908,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "bool",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_time_to_first_engagement"] = new ContactProperty("hs_time_to_first_engagement", {
@@ -696,9 +924,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "calculation_equation",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["hs_updated_by_user_id"] = new ContactProperty("hs_updated_by_user_id", {
@@ -708,9 +940,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hubspot_owner_assigneddate"] = new ContactProperty("hubspot_owner_assigneddate", {
@@ -720,9 +956,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["ip_city"] = new ContactProperty("ip_city", {
@@ -732,9 +972,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["ip_country"] = new ContactProperty("ip_country", {
@@ -744,9 +988,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["ip_country_code"] = new ContactProperty("ip_country_code", {
@@ -756,9 +1004,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["ip_latlon"] = new ContactProperty("ip_latlon", {
@@ -768,9 +1020,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["ip_state"] = new ContactProperty("ip_state", {
@@ -780,9 +1036,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["ip_state_code"] = new ContactProperty("ip_state_code", {
@@ -792,9 +1052,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["ip_zipcode"] = new ContactProperty("ip_zipcode", {
@@ -804,9 +1068,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["job_function"] = new ContactProperty("job_function", {
@@ -816,9 +1084,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["last_utm_campaign"] = new ContactProperty("last_utm_campaign", {
@@ -828,9 +1100,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["last_utm_medium"] = new ContactProperty("last_utm_medium", {
@@ -840,9 +1116,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["last_utm_source"] = new ContactProperty("last_utm_source", {
@@ -852,9 +1132,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["lastmodifieddate"] = new ContactProperty("lastmodifieddate", {
@@ -864,9 +1148,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["marital_status"] = new ContactProperty("marital_status", {
@@ -876,9 +1164,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["military_status"] = new ContactProperty("military_status", {
@@ -888,9 +1180,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["num_associated_deals"] = new ContactProperty("num_associated_deals", {
@@ -900,9 +1196,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["num_conversion_events"] = new ContactProperty("num_conversion_events", {
@@ -912,9 +1212,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["num_unique_conversion_events"] = new ContactProperty("num_unique_conversion_events", {
@@ -924,9 +1228,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["recent_conversion_date"] = new ContactProperty("recent_conversion_date", {
@@ -936,9 +1244,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["recent_conversion_event_name"] = new ContactProperty("recent_conversion_event_name", {
@@ -948,9 +1260,13 @@ const contactProperties = () => {
         groupName: "conversioninformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: true,
     });
 
     properties["recent_deal_amount"] = new ContactProperty("recent_deal_amount", {
@@ -960,9 +1276,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["recent_deal_close_date"] = new ContactProperty("recent_deal_close_date", {
@@ -972,9 +1292,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["relationship_status"] = new ContactProperty("relationship_status", {
@@ -984,9 +1308,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["school"] = new ContactProperty("school", {
@@ -996,9 +1324,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["seniority"] = new ContactProperty("seniority", {
@@ -1008,9 +1340,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["start_date"] = new ContactProperty("start_date", {
@@ -1020,9 +1356,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["total_revenue"] = new ContactProperty("total_revenue", {
@@ -1032,9 +1372,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: -1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["work_email"] = new ContactProperty("work_email", {
@@ -1044,9 +1388,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: -1,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["firstname"] = new ContactProperty("firstname", {
@@ -1056,9 +1404,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 0,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_first_url"] = new ContactProperty("hs_analytics_first_url", {
@@ -1068,9 +1420,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 0,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_delivered"] = new ContactProperty("hs_email_delivered", {
@@ -1080,9 +1436,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 0,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_optout_7610754"] = new ContactProperty("hs_email_optout_7610754", {
@@ -1092,9 +1452,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "enumeration",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"No","displayOrder":-1,"value":"false"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Yes","displayOrder":-1,"value":"true"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"No","hidden":false,"description":null,"displayOrder":-1,"readOnly":null,"value":"false"},{"doubleData":null,"label":"Yes","hidden":false,"description":null,"displayOrder":-1,"readOnly":null,"value":"true"}],
         formField: false,
         displayOrder: 0,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["twitterhandle"] = new ContactProperty("twitterhandle", {
@@ -1104,9 +1468,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 0,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_last_url"] = new ContactProperty("hs_analytics_last_url", {
@@ -1116,9 +1484,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_open"] = new ContactProperty("hs_email_open", {
@@ -1128,9 +1500,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["lastname"] = new ContactProperty("lastname", {
@@ -1140,9 +1516,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 1,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_num_page_views"] = new ContactProperty("hs_analytics_num_page_views", {
@@ -1152,9 +1532,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 2,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_click"] = new ContactProperty("hs_email_click", {
@@ -1164,9 +1548,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 2,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["salutation"] = new ContactProperty("salutation", {
@@ -1176,9 +1564,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 2,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["email"] = new ContactProperty("email", {
@@ -1188,9 +1580,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 3,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_num_visits"] = new ContactProperty("hs_analytics_num_visits", {
@@ -1200,9 +1596,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 3,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_bounce"] = new ContactProperty("hs_email_bounce", {
@@ -1212,9 +1612,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 3,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_persona"] = new ContactProperty("hs_persona", {
@@ -1224,9 +1628,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 3,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_num_event_completions"] = new ContactProperty("hs_analytics_num_event_completions", {
@@ -1236,9 +1644,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 4,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_optout"] = new ContactProperty("hs_email_optout", {
@@ -1248,9 +1660,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "bool",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: 4,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["mobilephone"] = new ContactProperty("mobilephone", {
@@ -1260,9 +1676,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 4,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["phone"] = new ContactProperty("phone", {
@@ -1272,9 +1692,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 4,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["fax"] = new ContactProperty("fax", {
@@ -1284,9 +1708,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 5,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_first_timestamp"] = new ContactProperty("hs_analytics_first_timestamp", {
@@ -1296,9 +1724,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 5,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_last_email_name"] = new ContactProperty("hs_email_last_email_name", {
@@ -1308,9 +1740,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 5,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_last_send_date"] = new ContactProperty("hs_email_last_send_date", {
@@ -1320,9 +1756,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 5,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["address"] = new ContactProperty("address", {
@@ -1332,9 +1772,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["engagements_last_meeting_booked"] = new ContactProperty("engagements_last_meeting_booked", {
@@ -1344,9 +1788,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["engagements_last_meeting_booked_campaign"] = new ContactProperty("engagements_last_meeting_booked_campaign", {
@@ -1356,9 +1804,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["engagements_last_meeting_booked_medium"] = new ContactProperty("engagements_last_meeting_booked_medium", {
@@ -1368,9 +1820,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["engagements_last_meeting_booked_source"] = new ContactProperty("engagements_last_meeting_booked_source", {
@@ -1380,9 +1836,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_first_visit_timestamp"] = new ContactProperty("hs_analytics_first_visit_timestamp", {
@@ -1392,9 +1852,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_last_open_date"] = new ContactProperty("hs_email_last_open_date", {
@@ -1404,9 +1868,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_latest_meeting_activity"] = new ContactProperty("hs_latest_meeting_activity", {
@@ -1416,9 +1884,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_sales_email_last_replied"] = new ContactProperty("hs_sales_email_last_replied", {
@@ -1428,9 +1900,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hubspot_owner_id"] = new ContactProperty("hubspot_owner_id", {
@@ -1440,9 +1916,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["notes_last_contacted"] = new ContactProperty("notes_last_contacted", {
@@ -1452,9 +1932,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["notes_last_updated"] = new ContactProperty("notes_last_updated", {
@@ -1464,9 +1948,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["notes_next_activity_date"] = new ContactProperty("notes_next_activity_date", {
@@ -1476,9 +1964,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["num_contacted_notes"] = new ContactProperty("num_contacted_notes", {
@@ -1488,9 +1980,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["num_notes"] = new ContactProperty("num_notes", {
@@ -1500,9 +1996,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["surveymonkeyeventlastupdated"] = new ContactProperty("surveymonkeyeventlastupdated", {
@@ -1512,9 +2012,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["webinareventlastupdated"] = new ContactProperty("webinareventlastupdated", {
@@ -1524,9 +2028,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 6,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["city"] = new ContactProperty("city", {
@@ -1536,9 +2044,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 7,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_last_timestamp"] = new ContactProperty("hs_analytics_last_timestamp", {
@@ -1548,9 +2060,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 7,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_last_click_date"] = new ContactProperty("hs_email_last_click_date", {
@@ -1560,9 +2076,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 7,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hubspot_team_id"] = new ContactProperty("hubspot_team_id", {
@@ -1572,9 +2092,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 7,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_all_owner_ids"] = new ContactProperty("hs_all_owner_ids", {
@@ -1584,9 +2108,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 8,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_last_visit_timestamp"] = new ContactProperty("hs_analytics_last_visit_timestamp", {
@@ -1596,9 +2124,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 8,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_first_send_date"] = new ContactProperty("hs_email_first_send_date", {
@@ -1608,9 +2140,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 8,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["state"] = new ContactProperty("state", {
@@ -1620,9 +2156,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 8,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["hs_all_team_ids"] = new ContactProperty("hs_all_team_ids", {
@@ -1632,9 +2172,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 9,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_source"] = new ContactProperty("hs_analytics_source", {
@@ -1644,9 +2188,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "enumeration",
         fieldType: "select",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Organic Search","displayOrder":0,"value":"ORGANIC_SEARCH"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Paid Search","displayOrder":1,"value":"PAID_SEARCH"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Email Marketing","displayOrder":2,"value":"EMAIL_MARKETING"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Social Media","displayOrder":3,"value":"SOCIAL_MEDIA"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Referrals","displayOrder":4,"value":"REFERRALS"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Other Campaigns","displayOrder":5,"value":"OTHER_CAMPAIGNS"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Direct Traffic","displayOrder":6,"value":"DIRECT_TRAFFIC"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Offline Sources","displayOrder":7,"value":"OFFLINE"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Paid Social","displayOrder":8,"value":"PAID_SOCIAL"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"Organic Search","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"ORGANIC_SEARCH"},{"doubleData":null,"label":"Paid Search","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"PAID_SEARCH"},{"doubleData":null,"label":"Email Marketing","hidden":false,"description":null,"displayOrder":2,"readOnly":null,"value":"EMAIL_MARKETING"},{"doubleData":null,"label":"Social Media","hidden":false,"description":null,"displayOrder":3,"readOnly":null,"value":"SOCIAL_MEDIA"},{"doubleData":null,"label":"Referrals","hidden":false,"description":null,"displayOrder":4,"readOnly":null,"value":"REFERRALS"},{"doubleData":null,"label":"Other Campaigns","hidden":false,"description":null,"displayOrder":5,"readOnly":null,"value":"OTHER_CAMPAIGNS"},{"doubleData":null,"label":"Direct Traffic","hidden":false,"description":null,"displayOrder":6,"readOnly":null,"value":"DIRECT_TRAFFIC"},{"doubleData":null,"label":"Offline Sources","hidden":false,"description":null,"displayOrder":7,"readOnly":null,"value":"OFFLINE"},{"doubleData":null,"label":"Paid Social","hidden":false,"description":null,"displayOrder":8,"readOnly":null,"value":"PAID_SOCIAL"}],
         formField: false,
         displayOrder: 9,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_first_open_date"] = new ContactProperty("hs_email_first_open_date", {
@@ -1656,9 +2204,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 9,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["zip"] = new ContactProperty("zip", {
@@ -1668,9 +2220,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 9,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["country"] = new ContactProperty("country", {
@@ -1680,9 +2236,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 10,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["hs_all_accessible_team_ids"] = new ContactProperty("hs_all_accessible_team_ids", {
@@ -1692,9 +2252,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 10,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_source_data_1"] = new ContactProperty("hs_analytics_source_data_1", {
@@ -1704,9 +2268,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 10,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_first_click_date"] = new ContactProperty("hs_email_first_click_date", {
@@ -1716,9 +2284,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 10,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_source_data_2"] = new ContactProperty("hs_analytics_source_data_2", {
@@ -1728,9 +2300,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 11,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_email_is_ineligible"] = new ContactProperty("hs_email_is_ineligible", {
@@ -1740,9 +2316,13 @@ const contactProperties = () => {
         groupName: "emailinformation",
         type: "bool",
         fieldType: "booleancheckbox",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"True","displayOrder":0,"value":"true"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"False","displayOrder":1,"value":"false"}],
+        hidden: true,
+        options: [{"doubleData":null,"label":"True","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"true"},{"doubleData":null,"label":"False","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"false"}],
         formField: false,
         displayOrder: 11,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_language"] = new ContactProperty("hs_language", {
@@ -1752,9 +2332,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
-        options: [{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Afrikaans","displayOrder":0,"value":"af"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Albanian","displayOrder":1,"value":"sq"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Albanian - Albania","displayOrder":2,"value":"sq-al"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic","displayOrder":3,"value":"ar"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Algeria","displayOrder":4,"value":"ar-dz"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Bahrain","displayOrder":5,"value":"ar-bh"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Egypt","displayOrder":6,"value":"ar-eg"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Iraq","displayOrder":7,"value":"ar-iq"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Jordan","displayOrder":8,"value":"ar-jo"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Kuwait","displayOrder":9,"value":"ar-kw"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Lebanon","displayOrder":10,"value":"ar-lb"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Libya","displayOrder":11,"value":"ar-ly"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Morocco","displayOrder":12,"value":"ar-ma"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Oman","displayOrder":13,"value":"ar-om"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Qatar","displayOrder":14,"value":"ar-qa"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Saudi Arabia","displayOrder":15,"value":"ar-sa"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Sudan","displayOrder":16,"value":"ar-sd"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Syria","displayOrder":17,"value":"ar-sy"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Tunisia","displayOrder":18,"value":"ar-tn"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - United Arab Emirates","displayOrder":19,"value":"ar-ae"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Arabic - Yemen","displayOrder":20,"value":"ar-ye"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Armenian","displayOrder":21,"value":"hy"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Basque","displayOrder":22,"value":"eu"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Belarusian","displayOrder":23,"value":"be"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Belarusian - Belarus","displayOrder":24,"value":"be-by"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Bulgarian","displayOrder":25,"value":"bg"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Bulgarian - Bulgaria","displayOrder":26,"value":"bg-bg"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Catalan","displayOrder":27,"value":"ca"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Catalan - Catalan","displayOrder":28,"value":"ca-es"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese","displayOrder":29,"value":"zh"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese - China","displayOrder":30,"value":"zh-cn"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese - Hong Kong SAR","displayOrder":31,"value":"zh-hk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese - Macau SAR","displayOrder":32,"value":"zh-mo"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese - Singapore","displayOrder":33,"value":"zh-sg"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese - Taiwan","displayOrder":34,"value":"zh-tw"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese (Simplified)","displayOrder":35,"value":"zh-chs"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Chinese (Traditional)","displayOrder":36,"value":"zh-cht"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Croatian","displayOrder":37,"value":"hr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Croatian - Croatia","displayOrder":38,"value":"hr-hr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Czech","displayOrder":39,"value":"cs"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Czech - Czech Republic","displayOrder":40,"value":"cs-cz"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Danish","displayOrder":41,"value":"da"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Danish - Denmark","displayOrder":42,"value":"da-dk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Dutch","displayOrder":43,"value":"nl"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Dutch - Belgium","displayOrder":44,"value":"nl-be"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Dutch - The Netherlands","displayOrder":45,"value":"nl-nl"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English","displayOrder":46,"value":"en"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Australia","displayOrder":47,"value":"en-au"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Canada","displayOrder":48,"value":"en-ca"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Hong Kong","displayOrder":49,"value":"en-hk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - India","displayOrder":50,"value":"en-in"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Ireland","displayOrder":51,"value":"en-ie"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Malaysia","displayOrder":52,"value":"en-my"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Malta","displayOrder":53,"value":"en-mt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - New Zealand","displayOrder":54,"value":"en-nz"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Philippines","displayOrder":55,"value":"en-ph"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Singapore","displayOrder":56,"value":"en-sg"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - South Africa","displayOrder":57,"value":"en-za"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - United Kingdom","displayOrder":58,"value":"en-gb"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - United States","displayOrder":59,"value":"en-us"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"English - Zimbabwe","displayOrder":60,"value":"en-zw"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Estonian","displayOrder":61,"value":"et"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Estonian - Estonia","displayOrder":62,"value":"et-ee"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Faroese","displayOrder":63,"value":"fo"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Farsi","displayOrder":64,"value":"fa"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Finnish","displayOrder":65,"value":"fi"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Finnish - Finland","displayOrder":66,"value":"fi-fi"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"French","displayOrder":67,"value":"fr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"French - Belgium","displayOrder":68,"value":"fr-be"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"French - Canada","displayOrder":69,"value":"fr-ca"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"French - France","displayOrder":70,"value":"fr-fr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"French - Luxembourg","displayOrder":71,"value":"fr-lu"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"French - Monaco","displayOrder":72,"value":"fr-mc"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"French - Switzerland","displayOrder":73,"value":"fr-ch"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Galician","displayOrder":74,"value":"gl"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Georgian","displayOrder":75,"value":"ka"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"German","displayOrder":76,"value":"de"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"German - Austria","displayOrder":77,"value":"de-at"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"German - Germany","displayOrder":78,"value":"de-de"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"German - Greece","displayOrder":79,"value":"de-gr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"German - Liechtenstein","displayOrder":80,"value":"de-li"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"German - Luxembourg","displayOrder":81,"value":"de-lu"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"German - Switzerland","displayOrder":82,"value":"de-ch"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Greek","displayOrder":83,"value":"el"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Greek - Cyprus","displayOrder":84,"value":"el-cy"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Greek - Greece","displayOrder":85,"value":"el-gr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Gujarati","displayOrder":86,"value":"gu"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Hebrew","displayOrder":87,"value":"he"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Hebrew - Israel","displayOrder":88,"value":"iw-il"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Hindi","displayOrder":89,"value":"hi"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Hindi - India","displayOrder":90,"value":"hi-in"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Hungarian","displayOrder":91,"value":"hu"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Hungarian - Hungary","displayOrder":92,"value":"hu-hu"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Icelandic","displayOrder":93,"value":"is"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Icelandic - Iceland","displayOrder":94,"value":"is-is"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Indonesian","displayOrder":95,"value":"id"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Indonesian - Indonesia","displayOrder":96,"value":"in-id"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Irish","displayOrder":97,"value":"ga"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Irish - Ireland","displayOrder":98,"value":"ga-ie"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Italian","displayOrder":99,"value":"it"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Italian - Italy","displayOrder":100,"value":"it-it"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Italian - Switzerland","displayOrder":101,"value":"it-ch"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Japanese","displayOrder":102,"value":"ja"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Japanese - Japan","displayOrder":103,"value":"ja-jp"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Kannada","displayOrder":104,"value":"kn"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Kazakh kok Konkani","displayOrder":105,"value":"kk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Konkani","displayOrder":106,"value":"kok"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Korean","displayOrder":107,"value":"ko"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Korean - South Korea","displayOrder":108,"value":"ko-kr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Kyrgyz","displayOrder":109,"value":"ky"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Latvian","displayOrder":110,"value":"lv"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Latvian - Latvia","displayOrder":111,"value":"lv-lv"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Lithuanian","displayOrder":112,"value":"lt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Lithuanian - Lithuania","displayOrder":113,"value":"lt-lt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Macedonian","displayOrder":114,"value":"mk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Macedonian - Macedonia","displayOrder":115,"value":"mk-mk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Malay","displayOrder":116,"value":"ms"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Malay - Brunei","displayOrder":117,"value":"ms-bn"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Malay - Malaysia","displayOrder":118,"value":"ms-my"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Maltese","displayOrder":119,"value":"mt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Maltese - Malta","displayOrder":120,"value":"mt-mt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Marathi","displayOrder":121,"value":"mr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Mongolian","displayOrder":122,"value":"mn"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Burmese","displayOrder":123,"value":"my"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Burmese - Myanmar (Burma)","displayOrder":124,"value":"my-mm"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Norwegian","displayOrder":125,"value":"no"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Norwegian Bokmal","displayOrder":126,"value":"nb"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Norwegian - Norway","displayOrder":127,"value":"no-no"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Polish","displayOrder":128,"value":"pl"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Polish - Poland","displayOrder":129,"value":"pl-pl"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Portuguese","displayOrder":130,"value":"pt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Portuguese - Brazil","displayOrder":131,"value":"pt-br"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Portuguese - Portugal","displayOrder":132,"value":"pt-pt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Punjabi","displayOrder":133,"value":"pa"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Romanian","displayOrder":134,"value":"ro"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Romanian - Romania","displayOrder":135,"value":"ro-ro"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Russian","displayOrder":136,"value":"ru"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Russian - Russia","displayOrder":137,"value":"ru-ru"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Sanskrit","displayOrder":138,"value":"sa"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Serbian","displayOrder":139,"value":"sr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Serbian - Bosnia and Herzegovina","displayOrder":140,"value":"sr-ba"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Serbian - Montenegro","displayOrder":141,"value":"sr-me"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Serbian - Serbia","displayOrder":142,"value":"sr-rs"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Serbian - Serbia and Montenegro (Former)","displayOrder":143,"value":"sr-cs"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Slovak","displayOrder":144,"value":"sk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Slovak - Slovakia","displayOrder":145,"value":"sk-sk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Slovenian","displayOrder":146,"value":"sl"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Slovenian - Slovenia","displayOrder":147,"value":"sl-si"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish","displayOrder":148,"value":"es"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Argentina","displayOrder":149,"value":"es-ar"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Bolivia","displayOrder":150,"value":"es-bo"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Chile","displayOrder":151,"value":"es-cl"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Colombia","displayOrder":152,"value":"es-co"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Costa Rica","displayOrder":153,"value":"es-cr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Cuba","displayOrder":154,"value":"es-cu"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Dominican Republic","displayOrder":155,"value":"es-do"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Ecuador","displayOrder":156,"value":"es-ec"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - El Salvador","displayOrder":157,"value":"es-sv"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Guatemala","displayOrder":158,"value":"es-gt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Honduras","displayOrder":159,"value":"es-hn"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Mexico","displayOrder":160,"value":"es-mx"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Nicaragua","displayOrder":161,"value":"es-ni"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Panama","displayOrder":162,"value":"es-pa"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Paraguay","displayOrder":163,"value":"es-py"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Peru","displayOrder":164,"value":"es-pe"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Puerto Rico","displayOrder":165,"value":"es-pr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Spain","displayOrder":166,"value":"es-es"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - United States","displayOrder":167,"value":"es-us"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Uruguay","displayOrder":168,"value":"es-uy"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Spanish - Venezuela","displayOrder":169,"value":"es-ve"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Swahili","displayOrder":170,"value":"sw"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Swedish","displayOrder":171,"value":"sv"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Swedish - Finland","displayOrder":172,"value":"sv-fi"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Swedish - Sweden","displayOrder":173,"value":"sv-se"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Syriac","displayOrder":174,"value":"sy"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Tamil","displayOrder":175,"value":"ta"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Tatar","displayOrder":176,"value":"tt"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Telugu","displayOrder":177,"value":"te"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Thai","displayOrder":178,"value":"th"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Thai - Thailand","displayOrder":179,"value":"th-th"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Turkish","displayOrder":180,"value":"tr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Turkish - Turkey","displayOrder":181,"value":"tr-tr"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Ukrainian","displayOrder":182,"value":"uk"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Ukrainian - Ukraine","displayOrder":183,"value":"uk-ua"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Urdu","displayOrder":184,"value":"ur"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Vietnamese","displayOrder":185,"value":"vi"},{"readOnly":true,"doubleData":null,"description":null,"hidden":false,"label":"Vietnamese - Vietnam","displayOrder":186,"value":"vi-vn"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"Afrikaans","hidden":false,"description":null,"displayOrder":0,"readOnly":true,"value":"af"},{"doubleData":null,"label":"Albanian","hidden":false,"description":null,"displayOrder":1,"readOnly":true,"value":"sq"},{"doubleData":null,"label":"Albanian - Albania","hidden":false,"description":null,"displayOrder":2,"readOnly":true,"value":"sq-al"},{"doubleData":null,"label":"Arabic","hidden":false,"description":null,"displayOrder":3,"readOnly":true,"value":"ar"},{"doubleData":null,"label":"Arabic - Algeria","hidden":false,"description":null,"displayOrder":4,"readOnly":true,"value":"ar-dz"},{"doubleData":null,"label":"Arabic - Bahrain","hidden":false,"description":null,"displayOrder":5,"readOnly":true,"value":"ar-bh"},{"doubleData":null,"label":"Arabic - Egypt","hidden":false,"description":null,"displayOrder":6,"readOnly":true,"value":"ar-eg"},{"doubleData":null,"label":"Arabic - Iraq","hidden":false,"description":null,"displayOrder":7,"readOnly":true,"value":"ar-iq"},{"doubleData":null,"label":"Arabic - Jordan","hidden":false,"description":null,"displayOrder":8,"readOnly":true,"value":"ar-jo"},{"doubleData":null,"label":"Arabic - Kuwait","hidden":false,"description":null,"displayOrder":9,"readOnly":true,"value":"ar-kw"},{"doubleData":null,"label":"Arabic - Lebanon","hidden":false,"description":null,"displayOrder":10,"readOnly":true,"value":"ar-lb"},{"doubleData":null,"label":"Arabic - Libya","hidden":false,"description":null,"displayOrder":11,"readOnly":true,"value":"ar-ly"},{"doubleData":null,"label":"Arabic - Morocco","hidden":false,"description":null,"displayOrder":12,"readOnly":true,"value":"ar-ma"},{"doubleData":null,"label":"Arabic - Oman","hidden":false,"description":null,"displayOrder":13,"readOnly":true,"value":"ar-om"},{"doubleData":null,"label":"Arabic - Qatar","hidden":false,"description":null,"displayOrder":14,"readOnly":true,"value":"ar-qa"},{"doubleData":null,"label":"Arabic - Saudi Arabia","hidden":false,"description":null,"displayOrder":15,"readOnly":true,"value":"ar-sa"},{"doubleData":null,"label":"Arabic - Sudan","hidden":false,"description":null,"displayOrder":16,"readOnly":true,"value":"ar-sd"},{"doubleData":null,"label":"Arabic - Syria","hidden":false,"description":null,"displayOrder":17,"readOnly":true,"value":"ar-sy"},{"doubleData":null,"label":"Arabic - Tunisia","hidden":false,"description":null,"displayOrder":18,"readOnly":true,"value":"ar-tn"},{"doubleData":null,"label":"Arabic - United Arab Emirates","hidden":false,"description":null,"displayOrder":19,"readOnly":true,"value":"ar-ae"},{"doubleData":null,"label":"Arabic - Yemen","hidden":false,"description":null,"displayOrder":20,"readOnly":true,"value":"ar-ye"},{"doubleData":null,"label":"Armenian","hidden":false,"description":null,"displayOrder":21,"readOnly":true,"value":"hy"},{"doubleData":null,"label":"Basque","hidden":false,"description":null,"displayOrder":22,"readOnly":true,"value":"eu"},{"doubleData":null,"label":"Belarusian","hidden":false,"description":null,"displayOrder":23,"readOnly":true,"value":"be"},{"doubleData":null,"label":"Belarusian - Belarus","hidden":false,"description":null,"displayOrder":24,"readOnly":true,"value":"be-by"},{"doubleData":null,"label":"Bulgarian","hidden":false,"description":null,"displayOrder":25,"readOnly":true,"value":"bg"},{"doubleData":null,"label":"Bulgarian - Bulgaria","hidden":false,"description":null,"displayOrder":26,"readOnly":true,"value":"bg-bg"},{"doubleData":null,"label":"Catalan","hidden":false,"description":null,"displayOrder":27,"readOnly":true,"value":"ca"},{"doubleData":null,"label":"Catalan - Catalan","hidden":false,"description":null,"displayOrder":28,"readOnly":true,"value":"ca-es"},{"doubleData":null,"label":"Chinese","hidden":false,"description":null,"displayOrder":29,"readOnly":true,"value":"zh"},{"doubleData":null,"label":"Chinese - China","hidden":false,"description":null,"displayOrder":30,"readOnly":true,"value":"zh-cn"},{"doubleData":null,"label":"Chinese - Hong Kong SAR","hidden":false,"description":null,"displayOrder":31,"readOnly":true,"value":"zh-hk"},{"doubleData":null,"label":"Chinese - Macau SAR","hidden":false,"description":null,"displayOrder":32,"readOnly":true,"value":"zh-mo"},{"doubleData":null,"label":"Chinese - Singapore","hidden":false,"description":null,"displayOrder":33,"readOnly":true,"value":"zh-sg"},{"doubleData":null,"label":"Chinese - Taiwan","hidden":false,"description":null,"displayOrder":34,"readOnly":true,"value":"zh-tw"},{"doubleData":null,"label":"Chinese (Simplified)","hidden":false,"description":null,"displayOrder":35,"readOnly":true,"value":"zh-chs"},{"doubleData":null,"label":"Chinese (Traditional)","hidden":false,"description":null,"displayOrder":36,"readOnly":true,"value":"zh-cht"},{"doubleData":null,"label":"Croatian","hidden":false,"description":null,"displayOrder":37,"readOnly":true,"value":"hr"},{"doubleData":null,"label":"Croatian - Croatia","hidden":false,"description":null,"displayOrder":38,"readOnly":true,"value":"hr-hr"},{"doubleData":null,"label":"Czech","hidden":false,"description":null,"displayOrder":39,"readOnly":true,"value":"cs"},{"doubleData":null,"label":"Czech - Czech Republic","hidden":false,"description":null,"displayOrder":40,"readOnly":true,"value":"cs-cz"},{"doubleData":null,"label":"Danish","hidden":false,"description":null,"displayOrder":41,"readOnly":true,"value":"da"},{"doubleData":null,"label":"Danish - Denmark","hidden":false,"description":null,"displayOrder":42,"readOnly":true,"value":"da-dk"},{"doubleData":null,"label":"Dutch","hidden":false,"description":null,"displayOrder":43,"readOnly":true,"value":"nl"},{"doubleData":null,"label":"Dutch - Belgium","hidden":false,"description":null,"displayOrder":44,"readOnly":true,"value":"nl-be"},{"doubleData":null,"label":"Dutch - The Netherlands","hidden":false,"description":null,"displayOrder":45,"readOnly":true,"value":"nl-nl"},{"doubleData":null,"label":"English","hidden":false,"description":null,"displayOrder":46,"readOnly":true,"value":"en"},{"doubleData":null,"label":"English - Australia","hidden":false,"description":null,"displayOrder":47,"readOnly":true,"value":"en-au"},{"doubleData":null,"label":"English - Canada","hidden":false,"description":null,"displayOrder":48,"readOnly":true,"value":"en-ca"},{"doubleData":null,"label":"English - Hong Kong","hidden":false,"description":null,"displayOrder":49,"readOnly":true,"value":"en-hk"},{"doubleData":null,"label":"English - India","hidden":false,"description":null,"displayOrder":50,"readOnly":true,"value":"en-in"},{"doubleData":null,"label":"English - Ireland","hidden":false,"description":null,"displayOrder":51,"readOnly":true,"value":"en-ie"},{"doubleData":null,"label":"English - Malaysia","hidden":false,"description":null,"displayOrder":52,"readOnly":true,"value":"en-my"},{"doubleData":null,"label":"English - Malta","hidden":false,"description":null,"displayOrder":53,"readOnly":true,"value":"en-mt"},{"doubleData":null,"label":"English - New Zealand","hidden":false,"description":null,"displayOrder":54,"readOnly":true,"value":"en-nz"},{"doubleData":null,"label":"English - Philippines","hidden":false,"description":null,"displayOrder":55,"readOnly":true,"value":"en-ph"},{"doubleData":null,"label":"English - Singapore","hidden":false,"description":null,"displayOrder":56,"readOnly":true,"value":"en-sg"},{"doubleData":null,"label":"English - South Africa","hidden":false,"description":null,"displayOrder":57,"readOnly":true,"value":"en-za"},{"doubleData":null,"label":"English - United Kingdom","hidden":false,"description":null,"displayOrder":58,"readOnly":true,"value":"en-gb"},{"doubleData":null,"label":"English - United States","hidden":false,"description":null,"displayOrder":59,"readOnly":true,"value":"en-us"},{"doubleData":null,"label":"English - Zimbabwe","hidden":false,"description":null,"displayOrder":60,"readOnly":true,"value":"en-zw"},{"doubleData":null,"label":"Estonian","hidden":false,"description":null,"displayOrder":61,"readOnly":true,"value":"et"},{"doubleData":null,"label":"Estonian - Estonia","hidden":false,"description":null,"displayOrder":62,"readOnly":true,"value":"et-ee"},{"doubleData":null,"label":"Faroese","hidden":false,"description":null,"displayOrder":63,"readOnly":true,"value":"fo"},{"doubleData":null,"label":"Farsi","hidden":false,"description":null,"displayOrder":64,"readOnly":true,"value":"fa"},{"doubleData":null,"label":"Finnish","hidden":false,"description":null,"displayOrder":65,"readOnly":true,"value":"fi"},{"doubleData":null,"label":"Finnish - Finland","hidden":false,"description":null,"displayOrder":66,"readOnly":true,"value":"fi-fi"},{"doubleData":null,"label":"French","hidden":false,"description":null,"displayOrder":67,"readOnly":true,"value":"fr"},{"doubleData":null,"label":"French - Belgium","hidden":false,"description":null,"displayOrder":68,"readOnly":true,"value":"fr-be"},{"doubleData":null,"label":"French - Canada","hidden":false,"description":null,"displayOrder":69,"readOnly":true,"value":"fr-ca"},{"doubleData":null,"label":"French - France","hidden":false,"description":null,"displayOrder":70,"readOnly":true,"value":"fr-fr"},{"doubleData":null,"label":"French - Luxembourg","hidden":false,"description":null,"displayOrder":71,"readOnly":true,"value":"fr-lu"},{"doubleData":null,"label":"French - Monaco","hidden":false,"description":null,"displayOrder":72,"readOnly":true,"value":"fr-mc"},{"doubleData":null,"label":"French - Switzerland","hidden":false,"description":null,"displayOrder":73,"readOnly":true,"value":"fr-ch"},{"doubleData":null,"label":"Galician","hidden":false,"description":null,"displayOrder":74,"readOnly":true,"value":"gl"},{"doubleData":null,"label":"Georgian","hidden":false,"description":null,"displayOrder":75,"readOnly":true,"value":"ka"},{"doubleData":null,"label":"German","hidden":false,"description":null,"displayOrder":76,"readOnly":true,"value":"de"},{"doubleData":null,"label":"German - Austria","hidden":false,"description":null,"displayOrder":77,"readOnly":true,"value":"de-at"},{"doubleData":null,"label":"German - Germany","hidden":false,"description":null,"displayOrder":78,"readOnly":true,"value":"de-de"},{"doubleData":null,"label":"German - Greece","hidden":false,"description":null,"displayOrder":79,"readOnly":true,"value":"de-gr"},{"doubleData":null,"label":"German - Liechtenstein","hidden":false,"description":null,"displayOrder":80,"readOnly":true,"value":"de-li"},{"doubleData":null,"label":"German - Luxembourg","hidden":false,"description":null,"displayOrder":81,"readOnly":true,"value":"de-lu"},{"doubleData":null,"label":"German - Switzerland","hidden":false,"description":null,"displayOrder":82,"readOnly":true,"value":"de-ch"},{"doubleData":null,"label":"Greek","hidden":false,"description":null,"displayOrder":83,"readOnly":true,"value":"el"},{"doubleData":null,"label":"Greek - Cyprus","hidden":false,"description":null,"displayOrder":84,"readOnly":true,"value":"el-cy"},{"doubleData":null,"label":"Greek - Greece","hidden":false,"description":null,"displayOrder":85,"readOnly":true,"value":"el-gr"},{"doubleData":null,"label":"Gujarati","hidden":false,"description":null,"displayOrder":86,"readOnly":true,"value":"gu"},{"doubleData":null,"label":"Hebrew","hidden":false,"description":null,"displayOrder":87,"readOnly":true,"value":"he"},{"doubleData":null,"label":"Hebrew - Israel","hidden":false,"description":null,"displayOrder":88,"readOnly":true,"value":"iw-il"},{"doubleData":null,"label":"Hindi","hidden":false,"description":null,"displayOrder":89,"readOnly":true,"value":"hi"},{"doubleData":null,"label":"Hindi - India","hidden":false,"description":null,"displayOrder":90,"readOnly":true,"value":"hi-in"},{"doubleData":null,"label":"Hungarian","hidden":false,"description":null,"displayOrder":91,"readOnly":true,"value":"hu"},{"doubleData":null,"label":"Hungarian - Hungary","hidden":false,"description":null,"displayOrder":92,"readOnly":true,"value":"hu-hu"},{"doubleData":null,"label":"Icelandic","hidden":false,"description":null,"displayOrder":93,"readOnly":true,"value":"is"},{"doubleData":null,"label":"Icelandic - Iceland","hidden":false,"description":null,"displayOrder":94,"readOnly":true,"value":"is-is"},{"doubleData":null,"label":"Indonesian","hidden":false,"description":null,"displayOrder":95,"readOnly":true,"value":"id"},{"doubleData":null,"label":"Indonesian - Indonesia","hidden":false,"description":null,"displayOrder":96,"readOnly":true,"value":"in-id"},{"doubleData":null,"label":"Irish","hidden":false,"description":null,"displayOrder":97,"readOnly":true,"value":"ga"},{"doubleData":null,"label":"Irish - Ireland","hidden":false,"description":null,"displayOrder":98,"readOnly":true,"value":"ga-ie"},{"doubleData":null,"label":"Italian","hidden":false,"description":null,"displayOrder":99,"readOnly":true,"value":"it"},{"doubleData":null,"label":"Italian - Italy","hidden":false,"description":null,"displayOrder":100,"readOnly":true,"value":"it-it"},{"doubleData":null,"label":"Italian - Switzerland","hidden":false,"description":null,"displayOrder":101,"readOnly":true,"value":"it-ch"},{"doubleData":null,"label":"Japanese","hidden":false,"description":null,"displayOrder":102,"readOnly":true,"value":"ja"},{"doubleData":null,"label":"Japanese - Japan","hidden":false,"description":null,"displayOrder":103,"readOnly":true,"value":"ja-jp"},{"doubleData":null,"label":"Kannada","hidden":false,"description":null,"displayOrder":104,"readOnly":true,"value":"kn"},{"doubleData":null,"label":"Kazakh kok Konkani","hidden":false,"description":null,"displayOrder":105,"readOnly":true,"value":"kk"},{"doubleData":null,"label":"Konkani","hidden":false,"description":null,"displayOrder":106,"readOnly":true,"value":"kok"},{"doubleData":null,"label":"Korean","hidden":false,"description":null,"displayOrder":107,"readOnly":true,"value":"ko"},{"doubleData":null,"label":"Korean - South Korea","hidden":false,"description":null,"displayOrder":108,"readOnly":true,"value":"ko-kr"},{"doubleData":null,"label":"Kyrgyz","hidden":false,"description":null,"displayOrder":109,"readOnly":true,"value":"ky"},{"doubleData":null,"label":"Latvian","hidden":false,"description":null,"displayOrder":110,"readOnly":true,"value":"lv"},{"doubleData":null,"label":"Latvian - Latvia","hidden":false,"description":null,"displayOrder":111,"readOnly":true,"value":"lv-lv"},{"doubleData":null,"label":"Lithuanian","hidden":false,"description":null,"displayOrder":112,"readOnly":true,"value":"lt"},{"doubleData":null,"label":"Lithuanian - Lithuania","hidden":false,"description":null,"displayOrder":113,"readOnly":true,"value":"lt-lt"},{"doubleData":null,"label":"Macedonian","hidden":false,"description":null,"displayOrder":114,"readOnly":true,"value":"mk"},{"doubleData":null,"label":"Macedonian - Macedonia","hidden":false,"description":null,"displayOrder":115,"readOnly":true,"value":"mk-mk"},{"doubleData":null,"label":"Malay","hidden":false,"description":null,"displayOrder":116,"readOnly":true,"value":"ms"},{"doubleData":null,"label":"Malay - Brunei","hidden":false,"description":null,"displayOrder":117,"readOnly":true,"value":"ms-bn"},{"doubleData":null,"label":"Malay - Malaysia","hidden":false,"description":null,"displayOrder":118,"readOnly":true,"value":"ms-my"},{"doubleData":null,"label":"Maltese","hidden":false,"description":null,"displayOrder":119,"readOnly":true,"value":"mt"},{"doubleData":null,"label":"Maltese - Malta","hidden":false,"description":null,"displayOrder":120,"readOnly":true,"value":"mt-mt"},{"doubleData":null,"label":"Marathi","hidden":false,"description":null,"displayOrder":121,"readOnly":true,"value":"mr"},{"doubleData":null,"label":"Mongolian","hidden":false,"description":null,"displayOrder":122,"readOnly":true,"value":"mn"},{"doubleData":null,"label":"Burmese","hidden":false,"description":null,"displayOrder":123,"readOnly":true,"value":"my"},{"doubleData":null,"label":"Burmese - Myanmar (Burma)","hidden":false,"description":null,"displayOrder":124,"readOnly":true,"value":"my-mm"},{"doubleData":null,"label":"Norwegian","hidden":false,"description":null,"displayOrder":125,"readOnly":true,"value":"no"},{"doubleData":null,"label":"Norwegian Bokmal","hidden":false,"description":null,"displayOrder":126,"readOnly":true,"value":"nb"},{"doubleData":null,"label":"Norwegian - Norway","hidden":false,"description":null,"displayOrder":127,"readOnly":true,"value":"no-no"},{"doubleData":null,"label":"Polish","hidden":false,"description":null,"displayOrder":128,"readOnly":true,"value":"pl"},{"doubleData":null,"label":"Polish - Poland","hidden":false,"description":null,"displayOrder":129,"readOnly":true,"value":"pl-pl"},{"doubleData":null,"label":"Portuguese","hidden":false,"description":null,"displayOrder":130,"readOnly":true,"value":"pt"},{"doubleData":null,"label":"Portuguese - Brazil","hidden":false,"description":null,"displayOrder":131,"readOnly":true,"value":"pt-br"},{"doubleData":null,"label":"Portuguese - Portugal","hidden":false,"description":null,"displayOrder":132,"readOnly":true,"value":"pt-pt"},{"doubleData":null,"label":"Punjabi","hidden":false,"description":null,"displayOrder":133,"readOnly":true,"value":"pa"},{"doubleData":null,"label":"Romanian","hidden":false,"description":null,"displayOrder":134,"readOnly":true,"value":"ro"},{"doubleData":null,"label":"Romanian - Romania","hidden":false,"description":null,"displayOrder":135,"readOnly":true,"value":"ro-ro"},{"doubleData":null,"label":"Russian","hidden":false,"description":null,"displayOrder":136,"readOnly":true,"value":"ru"},{"doubleData":null,"label":"Russian - Russia","hidden":false,"description":null,"displayOrder":137,"readOnly":true,"value":"ru-ru"},{"doubleData":null,"label":"Sanskrit","hidden":false,"description":null,"displayOrder":138,"readOnly":true,"value":"sa"},{"doubleData":null,"label":"Serbian","hidden":false,"description":null,"displayOrder":139,"readOnly":true,"value":"sr"},{"doubleData":null,"label":"Serbian - Bosnia and Herzegovina","hidden":false,"description":null,"displayOrder":140,"readOnly":true,"value":"sr-ba"},{"doubleData":null,"label":"Serbian - Montenegro","hidden":false,"description":null,"displayOrder":141,"readOnly":true,"value":"sr-me"},{"doubleData":null,"label":"Serbian - Serbia","hidden":false,"description":null,"displayOrder":142,"readOnly":true,"value":"sr-rs"},{"doubleData":null,"label":"Serbian - Serbia and Montenegro (Former)","hidden":false,"description":null,"displayOrder":143,"readOnly":true,"value":"sr-cs"},{"doubleData":null,"label":"Slovak","hidden":false,"description":null,"displayOrder":144,"readOnly":true,"value":"sk"},{"doubleData":null,"label":"Slovak - Slovakia","hidden":false,"description":null,"displayOrder":145,"readOnly":true,"value":"sk-sk"},{"doubleData":null,"label":"Slovenian","hidden":false,"description":null,"displayOrder":146,"readOnly":true,"value":"sl"},{"doubleData":null,"label":"Slovenian - Slovenia","hidden":false,"description":null,"displayOrder":147,"readOnly":true,"value":"sl-si"},{"doubleData":null,"label":"Spanish","hidden":false,"description":null,"displayOrder":148,"readOnly":true,"value":"es"},{"doubleData":null,"label":"Spanish - Argentina","hidden":false,"description":null,"displayOrder":149,"readOnly":true,"value":"es-ar"},{"doubleData":null,"label":"Spanish - Bolivia","hidden":false,"description":null,"displayOrder":150,"readOnly":true,"value":"es-bo"},{"doubleData":null,"label":"Spanish - Chile","hidden":false,"description":null,"displayOrder":151,"readOnly":true,"value":"es-cl"},{"doubleData":null,"label":"Spanish - Colombia","hidden":false,"description":null,"displayOrder":152,"readOnly":true,"value":"es-co"},{"doubleData":null,"label":"Spanish - Costa Rica","hidden":false,"description":null,"displayOrder":153,"readOnly":true,"value":"es-cr"},{"doubleData":null,"label":"Spanish - Cuba","hidden":false,"description":null,"displayOrder":154,"readOnly":true,"value":"es-cu"},{"doubleData":null,"label":"Spanish - Dominican Republic","hidden":false,"description":null,"displayOrder":155,"readOnly":true,"value":"es-do"},{"doubleData":null,"label":"Spanish - Ecuador","hidden":false,"description":null,"displayOrder":156,"readOnly":true,"value":"es-ec"},{"doubleData":null,"label":"Spanish - El Salvador","hidden":false,"description":null,"displayOrder":157,"readOnly":true,"value":"es-sv"},{"doubleData":null,"label":"Spanish - Guatemala","hidden":false,"description":null,"displayOrder":158,"readOnly":true,"value":"es-gt"},{"doubleData":null,"label":"Spanish - Honduras","hidden":false,"description":null,"displayOrder":159,"readOnly":true,"value":"es-hn"},{"doubleData":null,"label":"Spanish - Mexico","hidden":false,"description":null,"displayOrder":160,"readOnly":true,"value":"es-mx"},{"doubleData":null,"label":"Spanish - Nicaragua","hidden":false,"description":null,"displayOrder":161,"readOnly":true,"value":"es-ni"},{"doubleData":null,"label":"Spanish - Panama","hidden":false,"description":null,"displayOrder":162,"readOnly":true,"value":"es-pa"},{"doubleData":null,"label":"Spanish - Paraguay","hidden":false,"description":null,"displayOrder":163,"readOnly":true,"value":"es-py"},{"doubleData":null,"label":"Spanish - Peru","hidden":false,"description":null,"displayOrder":164,"readOnly":true,"value":"es-pe"},{"doubleData":null,"label":"Spanish - Puerto Rico","hidden":false,"description":null,"displayOrder":165,"readOnly":true,"value":"es-pr"},{"doubleData":null,"label":"Spanish - Spain","hidden":false,"description":null,"displayOrder":166,"readOnly":true,"value":"es-es"},{"doubleData":null,"label":"Spanish - United States","hidden":false,"description":null,"displayOrder":167,"readOnly":true,"value":"es-us"},{"doubleData":null,"label":"Spanish - Uruguay","hidden":false,"description":null,"displayOrder":168,"readOnly":true,"value":"es-uy"},{"doubleData":null,"label":"Spanish - Venezuela","hidden":false,"description":null,"displayOrder":169,"readOnly":true,"value":"es-ve"},{"doubleData":null,"label":"Swahili","hidden":false,"description":null,"displayOrder":170,"readOnly":true,"value":"sw"},{"doubleData":null,"label":"Swedish","hidden":false,"description":null,"displayOrder":171,"readOnly":true,"value":"sv"},{"doubleData":null,"label":"Swedish - Finland","hidden":false,"description":null,"displayOrder":172,"readOnly":true,"value":"sv-fi"},{"doubleData":null,"label":"Swedish - Sweden","hidden":false,"description":null,"displayOrder":173,"readOnly":true,"value":"sv-se"},{"doubleData":null,"label":"Syriac","hidden":false,"description":null,"displayOrder":174,"readOnly":true,"value":"sy"},{"doubleData":null,"label":"Tamil","hidden":false,"description":null,"displayOrder":175,"readOnly":true,"value":"ta"},{"doubleData":null,"label":"Tatar","hidden":false,"description":null,"displayOrder":176,"readOnly":true,"value":"tt"},{"doubleData":null,"label":"Telugu","hidden":false,"description":null,"displayOrder":177,"readOnly":true,"value":"te"},{"doubleData":null,"label":"Thai","hidden":false,"description":null,"displayOrder":178,"readOnly":true,"value":"th"},{"doubleData":null,"label":"Thai - Thailand","hidden":false,"description":null,"displayOrder":179,"readOnly":true,"value":"th-th"},{"doubleData":null,"label":"Turkish","hidden":false,"description":null,"displayOrder":180,"readOnly":true,"value":"tr"},{"doubleData":null,"label":"Turkish - Turkey","hidden":false,"description":null,"displayOrder":181,"readOnly":true,"value":"tr-tr"},{"doubleData":null,"label":"Ukrainian","hidden":false,"description":null,"displayOrder":182,"readOnly":true,"value":"uk"},{"doubleData":null,"label":"Ukrainian - Ukraine","hidden":false,"description":null,"displayOrder":183,"readOnly":true,"value":"uk-ua"},{"doubleData":null,"label":"Urdu","hidden":false,"description":null,"displayOrder":184,"readOnly":true,"value":"ur"},{"doubleData":null,"label":"Vietnamese","hidden":false,"description":null,"displayOrder":185,"readOnly":true,"value":"vi"},{"doubleData":null,"label":"Vietnamese - Vietnam","hidden":false,"description":null,"displayOrder":186,"readOnly":true,"value":"vi-vn"}],
         formField: true,
         displayOrder: 11,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_first_referrer"] = new ContactProperty("hs_analytics_first_referrer", {
@@ -1764,9 +2348,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 12,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["jobtitle"] = new ContactProperty("jobtitle", {
@@ -1776,9 +2364,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 12,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_last_referrer"] = new ContactProperty("hs_analytics_last_referrer", {
@@ -1788,9 +2380,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 13,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["message"] = new ContactProperty("message", {
@@ -1800,9 +2396,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "textarea",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 13,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["closedate"] = new ContactProperty("closedate", {
@@ -1812,9 +2412,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 14,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_average_page_views"] = new ContactProperty("hs_analytics_average_page_views", {
@@ -1824,9 +2428,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 14,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_analytics_revenue"] = new ContactProperty("hs_analytics_revenue", {
@@ -1836,9 +2444,13 @@ const contactProperties = () => {
         groupName: "analyticsinformation",
         type: "number",
         fieldType: "number",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 15,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_lead_date"] = new ContactProperty("hs_lifecyclestage_lead_date", {
@@ -1848,9 +2460,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 15,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_marketingqualifiedlead_date"] = new ContactProperty("hs_lifecyclestage_marketingqualifiedlead_date", {
@@ -1860,9 +2476,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 15,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_opportunity_date"] = new ContactProperty("hs_lifecyclestage_opportunity_date", {
@@ -1872,9 +2492,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 15,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["lifecyclestage"] = new ContactProperty("lifecyclestage", {
@@ -1884,9 +2508,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "radio",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Subscriber","displayOrder":0,"value":"subscriber"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Lead","displayOrder":1,"value":"lead"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Marketing Qualified Lead","displayOrder":2,"value":"marketingqualifiedlead"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Sales Qualified Lead","displayOrder":3,"value":"salesqualifiedlead"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Opportunity","displayOrder":4,"value":"opportunity"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Customer","displayOrder":5,"value":"customer"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Evangelist","displayOrder":6,"value":"evangelist"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"Other","displayOrder":7,"value":"other"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"Subscriber","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"subscriber"},{"doubleData":null,"label":"Lead","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"lead"},{"doubleData":null,"label":"Marketing Qualified Lead","hidden":false,"description":null,"displayOrder":2,"readOnly":null,"value":"marketingqualifiedlead"},{"doubleData":null,"label":"Sales Qualified Lead","hidden":false,"description":null,"displayOrder":3,"readOnly":null,"value":"salesqualifiedlead"},{"doubleData":null,"label":"Opportunity","hidden":false,"description":null,"displayOrder":4,"readOnly":null,"value":"opportunity"},{"doubleData":null,"label":"Customer","hidden":false,"description":null,"displayOrder":5,"readOnly":null,"value":"customer"},{"doubleData":null,"label":"Evangelist","hidden":false,"description":null,"displayOrder":6,"readOnly":null,"value":"evangelist"},{"doubleData":null,"label":"Other","hidden":false,"description":null,"displayOrder":7,"readOnly":null,"value":"other"}],
         formField: true,
         displayOrder: 15,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_salesqualifiedlead_date"] = new ContactProperty("hs_lifecyclestage_salesqualifiedlead_date", {
@@ -1896,9 +2524,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 16,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["createdate"] = new ContactProperty("createdate", {
@@ -1908,9 +2540,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 17,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_evangelist_date"] = new ContactProperty("hs_lifecyclestage_evangelist_date", {
@@ -1920,9 +2556,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 17,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_customer_date"] = new ContactProperty("hs_lifecyclestage_customer_date", {
@@ -1932,9 +2572,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 18,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hubspotscore"] = new ContactProperty("hubspotscore", {
@@ -1944,9 +2588,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "calculation_score",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 18,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["company"] = new ContactProperty("company", {
@@ -1956,9 +2604,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 19,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_subscriber_date"] = new ContactProperty("hs_lifecyclestage_subscriber_date", {
@@ -1968,9 +2620,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 19,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["hs_lifecyclestage_other_date"] = new ContactProperty("hs_lifecyclestage_other_date", {
@@ -1980,9 +2636,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "datetime",
         fieldType: "date",
+        hidden: false,
         options: [],
         formField: false,
         displayOrder: 20,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["website"] = new ContactProperty("website", {
@@ -1992,9 +2652,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 20,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["numemployees"] = new ContactProperty("numemployees", {
@@ -2004,9 +2668,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "enumeration",
         fieldType: "select",
-        options: [{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"1-5","displayOrder":0,"value":"1-5"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"5-25","displayOrder":1,"value":"5-25"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"25-50","displayOrder":2,"value":"25-50"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"50-100","displayOrder":3,"value":"50-100"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"100-500","displayOrder":4,"value":"100-500"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"500-1000","displayOrder":5,"value":"500-1000"},{"readOnly":null,"doubleData":null,"description":null,"hidden":false,"label":"1000+","displayOrder":6,"value":"1000+"}],
+        hidden: false,
+        options: [{"doubleData":null,"label":"1-5","hidden":false,"description":null,"displayOrder":0,"readOnly":null,"value":"1-5"},{"doubleData":null,"label":"5-25","hidden":false,"description":null,"displayOrder":1,"readOnly":null,"value":"5-25"},{"doubleData":null,"label":"25-50","hidden":false,"description":null,"displayOrder":2,"readOnly":null,"value":"25-50"},{"doubleData":null,"label":"50-100","hidden":false,"description":null,"displayOrder":3,"readOnly":null,"value":"50-100"},{"doubleData":null,"label":"100-500","hidden":false,"description":null,"displayOrder":4,"readOnly":null,"value":"100-500"},{"doubleData":null,"label":"500-1000","hidden":false,"description":null,"displayOrder":5,"readOnly":null,"value":"500-1000"},{"doubleData":null,"label":"1000+","hidden":false,"description":null,"displayOrder":6,"readOnly":null,"value":"1000+"}],
         formField: true,
         displayOrder: 21,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["annualrevenue"] = new ContactProperty("annualrevenue", {
@@ -2016,9 +2684,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 22,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["industry"] = new ContactProperty("industry", {
@@ -2028,9 +2700,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "string",
         fieldType: "text",
+        hidden: false,
         options: [],
         formField: true,
         displayOrder: 23,
+        readOnlyDefinition: false,
+        mutableDefinitionNotDeletable: true,
+        calculated: false,
     });
 
     properties["associatedcompanyid"] = new ContactProperty("associatedcompanyid", {
@@ -2040,9 +2716,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 24,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     properties["associatedcompanylastupdated"] = new ContactProperty("associatedcompanylastupdated", {
@@ -2052,9 +2732,13 @@ const contactProperties = () => {
         groupName: "contactinformation",
         type: "number",
         fieldType: "number",
+        hidden: true,
         options: [],
         formField: false,
         displayOrder: 25,
+        readOnlyDefinition: true,
+        mutableDefinitionNotDeletable: false,
+        calculated: false,
     });
 
     return properties;
