@@ -1,0 +1,10 @@
+{
+    "name": "hubspot_provider",
+    "devDependencies": {
+        "@types/node": "^13.7.7"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^1.0.0",
+        "axios": "^0.19.2"
+    }
+}

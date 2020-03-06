@@ -1,0 +1,3 @@
+config:
+  hubspot_provider:hubSpotApiKey:
+    secure: AAABALpDb4oOiH550i2RYh5uXdGaCruqX8Ww+jMeq08N8Je92T5AmfjcjSsVuiAAc6NJ+SJXNAQxrDvtaZGLUxcA6kc=
