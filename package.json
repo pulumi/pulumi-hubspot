@@ -1,8 +1,8 @@
 {
     "name": "hubspot_provider",
     "scripts": {
-        "update": "pulumi up --skip-preview -p 1",
-        "destroy": "pulumi destroy --skip-preview -p 1",
+        "update": "pulumi up --skip-preview -p 8",
+        "destroy": "pulumi destroy --skip-preview -p 8",
         "import_checkpoint": "pulumi stack export > checkpoint.json",
         "export_checkpoint": "cat checkpoint.json | pulumi stack import"
     },
