@@ -59,7 +59,7 @@ class ContactPropertyProvider implements pulumi.dynamic.ResourceProvider {
      */
     private populateDefaultValues(args: ContactPropertyApiArgs): ContactPropertyApiArgs {
         const defaults = {
-            description: "",
+            description: args.name,
             formField: false,
             displayOrder: -1,
             mutableDefinitionNotDeletable: false,
@@ -70,6 +70,11 @@ class ContactPropertyProvider implements pulumi.dynamic.ResourceProvider {
             deleted: false,
             calculated: false,
         };
+
+        // If the description is empty set it to the name of the field.
+        if (args.description === "") {
+            args.description = args.name;
+        }
 
         return Object.assign({}, defaults, args);
     }
@@ -85,14 +90,17 @@ class ContactPropertyProvider implements pulumi.dynamic.ResourceProvider {
         // the HubSpot API will throw an error.
         const requiredFields = [ "name", "label", "groupName", "type", "fieldType" ];
 
+        // Populate the update object with default values.
+        const updateWithDefaults = this.populateDefaultValues(update);
+
         // Create a new validator object.
-        const validator = new ObjectCheckFailureValidator(update);
+        const validator = new ObjectCheckFailureValidator(updateWithDefaults);
 
         // Create a map of fields to their types.
         const typeValues: any = this.typeValues();
 
         // Create an array of keys to check.
-        const updateKeys = Object.keys(update).filter((key: string) => {
+        const updateKeys = Object.keys(updateWithDefaults).filter((key: string) => {
             // Do not validate the __provider field.
             if (key === "__provider") {
                 return false;
