@@ -1,10 +1,11 @@
+import { GenericObject } from "./Common";
+
+export { GenericObject };
+
 export type RestClientError = null | GenericObject;
 export type RestClientResult = null | GenericObject;
 export type RestClientResponse = [ RestClientError, RestClientResult];
 
-export interface GenericObject {
-    [key: string]: any;
-}
 export interface RestClientFactoryOptions extends GenericObject {
     baseURL?: string;
     headers?: { [key: string]: string };

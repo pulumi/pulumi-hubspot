@@ -2,14 +2,24 @@ import * as fs from "fs";
 import { HubSpotClient } from "../provider/hubspot_client";
 import { ContactPropertyProps } from "../../types/ContactProperty";
 
+const hsClient = new HubSpotClient();
+
 export async function getCurrentContactProperties(): Promise<any[]> {
-    const hsClient = new HubSpotClient();
     const [ err, contactProperties ] = await hsClient.get("/properties/v1/contacts/properties");
     if (err) {
         throw new Error("Error fetching current contact properties: " + err?.response?.data?.message);
     }
 
     return contactProperties as any[];
+}
+
+export async function getCurrentContactPropertyGroups(): Promise<any[]> {
+    const [ err, contactPropertyGroups ] = await hsClient.get("");
+    if (err) {
+        throw new Error("Error fetching current contact property groups: " + err?.response?.data?.message);
+    }
+
+    return contactPropertyGroups as any[];
 }
 
 function buildArgs(props: any, keys: string[]): string {
@@ -29,7 +39,7 @@ function buildArgs(props: any, keys: string[]): string {
 
 function generateContactPropertyFunction(prop: any) {
     const buildArgsKeys = [
-        "name", "label", "groupName", "type", "fieldType", "description", "formField", "displayOrder",
+        "label", "groupName", "type", "fieldType", "description", "formField", "displayOrder",
         "mutableDefinitionNotDeletable", "readOnly", "readOnlyDefinition", "hidden", "options", "calculated"
     ];
     return "\n" +
