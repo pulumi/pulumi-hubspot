@@ -1,25 +1,73 @@
 import * as fs from "fs";
+import * as path from "path";
 import { HubSpotClient } from "../provider/hubspot_client";
-import { ContactPropertyProps } from "../../types/ContactProperty";
 
 const hsClient = new HubSpotClient();
 
-export async function getCurrentContactProperties(): Promise<any[]> {
+function createDirectory(path: string) {
+    try {
+        fs.mkdirSync(path);
+        return;
+    } catch (e) {
+        if (e.code === "EEXIST") {
+            return;
+        }
+        throw new Error(e);
+    }
+}
+
+function sortPropertiesByGroup(props: any) {
+    const result: any = {};
+    const propKeys = Object.keys(props);
+
+    for (let i = 0; i < propKeys.length; i++) {
+        const key = propKeys[i];
+        const prop = props[key];
+        const groupName = prop.groupName;
+
+        if (result[groupName] === undefined) {
+            result[groupName] = [prop];
+            continue;
+        }
+
+        result[groupName].push(prop);
+    }
+
+    return result;
+}
+
+export async function getCurrentContactPropertiesByGroup(): Promise<any> {
     const [ err, contactProperties ] = await hsClient.get("/properties/v1/contacts/properties");
     if (err) {
         throw new Error("Error fetching current contact properties: " + err?.response?.data?.message);
     }
 
-    return contactProperties as any[];
+    return sortPropertiesByGroup(contactProperties);
 }
 
 export async function getCurrentContactPropertyGroups(): Promise<any[]> {
-    const [ err, contactPropertyGroups ] = await hsClient.get("");
+    const [ err, contactPropertyGroups ] = await hsClient.get("/properties/v1/contacts/groups");
     if (err) {
         throw new Error("Error fetching current contact property groups: " + err?.response?.data?.message);
     }
 
     return contactPropertyGroups as any[];
+}
+
+export function buildContactPropertyGroupDirectories(groupNames: string[]) {
+    // Create the parent contact properties directory.
+    const contactPropertyDirectoryPath = path.join(__dirname, "/contact_properties");
+    createDirectory(contactPropertyDirectoryPath);
+
+    // Loop over the group names and create directory for each group that will
+    // contain its respective properties.
+    for (let i = 0; i < groupNames.length; i++) {
+        const groupName = groupNames[i];
+        const dirPath = path.join(__dirname, "/contact_properties", `/${groupName}`);
+        createDirectory(dirPath);
+    }
+
+    return;
 }
 
 function buildArgs(props: any, keys: string[]): string {
@@ -52,12 +100,11 @@ function generateContactPropertyFunction(prop: any) {
            `    });\n`;
 }
 
-export function generateContactPropertyTS(props: any[]) {
-    console.log(Object.keys(props));
-    let file = "// Contact Properties.\n" +
+export function generateContactPropertyTS(groupName: string, props: any[]) {
+    let file = `// Contact Properties in ${groupName}.\n` +
                "import * as pulumi from \"@pulumi/pulumi\";\n" +
-               "import { ContactProperty } from \"../provider/contact_properties\";\n\n" +
-               "const contactProperties = () => {\n" +
+               "import { ContactProperty } from \"../../../provider/contact_properties\";\n\n" +
+               "export const contactProperties = () => {\n" +
                "    const properties: any = {};\n";
 
     for (let i = 0; i < props.length; i++) {
@@ -66,8 +113,27 @@ export function generateContactPropertyTS(props: any[]) {
 
     file += "\n" +
             "    return properties;\n" +
-            "};\n\n" +
-            "export { contactProperties };\n";
+            "};\n";
 
-    fs.writeFileSync("./src/hubspot/hs_contact_properties.ts", file);
+    fs.writeFileSync(`./src/hubspot/contact_properties/${groupName}/index.ts`, file);
+}
+
+export function generateContactPropertyIndexFile(groupNames: string[]) {
+    let file = "// Contact Properties.\n" +
+               "import * as pulumi from \"@pulumi/pulumi\";\n";
+
+    // Loop over the group names and create the import statements.
+    for (let i = 0; i < groupNames.length; i++) {
+        const groupName = groupNames[i];
+        file += `import * as ${groupName} from "./${groupName}/index";\n`;
+    }
+
+    // Create the exported const.
+    const groupMethods = groupNames.map(name => `${name}.contactProperties()`).join(",");
+    file += `\n` +
+            `export const contactProperties = Object.assign({},\n` +
+            `${groupMethods}\n` +
+            `);\n`;
+
+    fs.writeFileSync(`./src/hubspot/contact_properties/index.ts`, file);
 }

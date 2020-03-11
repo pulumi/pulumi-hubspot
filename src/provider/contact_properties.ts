@@ -1,7 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import { HubSpotClient } from "./hubspot_client";
-import { getResourceDiffKeys, checkRequiredKeysExist, ObjectCheckFailureValidator } from "./utils";
-import { ContactPropertyProps, ManageOnlyCheckKeys, ManageOnlyDeleteCheckKeys, ContactPropertyApiArgs } from "../../types/ContactProperty";
+import { getResourceDiffKeys, ObjectCheckFailureValidator } from "./utils";
+import { ContactPropertyProps, ContactPropertyApiArgs } from "../../types/ContactProperty";
 
 type ValidatorMethodKey = "string" | "number" | "boolean" | "array";
 type ValidatorMethod = "isString" | "isNumber" | "isBoolean" | "isArray";

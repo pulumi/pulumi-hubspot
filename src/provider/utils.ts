@@ -95,22 +95,6 @@ export class ObjectCheckFailureValidator {
     }
 }
 
-export function checkRequiredKeysExist(obj: GenericObject, requiredKeys: string[]): pulumi.dynamic.CheckFailure[] {
-    const failures: pulumi.dynamic.CheckFailure[] = [];
-
-    for (let i = 0; i < requiredKeys.length; i++) {
-        const key = requiredKeys[i];
-        if (!obj[key]) {
-            failures.push({
-                property: key,
-                reason: `Required key [${key}] is missing.`,
-            });
-        }
-    }
-
-    return failures;
-}
-
 export function getResourceDiffKeys(a: GenericObject, b: GenericObject): string[] {
     const diffKeys: string[] = [];
     const bKeys = Object.keys(b);
